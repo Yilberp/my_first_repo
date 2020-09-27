@@ -67,7 +67,7 @@
             color: white;
         }
         .main{
-            height: 300px;
+            height: 130px;
             margin-top: 40px;
         }
         .main__title{
@@ -95,6 +95,39 @@
         .main__input::placeholder{
             color: white;
         }
+        .carousel{
+            width: 100%;
+            overflow: scroll;
+            padding: 30px;
+            position: relative;
+        }
+        .carousel__container{
+            white-space: nowrap;
+            margin: 70px 0px;
+            padding-bottom: 10px;
+        }
+        .carousel__item{
+            background-color: palevioletred;
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 450ms all;
+            transform-origin: center left;
+        }
+        .carousel__item:hover ~ .carousel__item{
+            transform: translate3d(100px,0,0);
+        }
+        .carousel__container:hover .carousel__item{
+            opacity: 0.3;
+        }
+        .carousel__container:hover .carousel__item:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -115,6 +148,16 @@
         <h2 class="main__title">¿Qué quieres ver hoy?</h2>
         <div class="main__searchEngine">
             <input class="main__input" type="text" placeholder="Buscar...">
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item">
+
+            </div>
+            <div class="carousel__item">
+
+            </div>
         </div>
     </section>
     <!-- <details>
