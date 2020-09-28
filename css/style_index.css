@@ -96,19 +96,27 @@ body{
     width: 100%;
 }
 .carousel{
-    width: 100%;
-    overflow: scroll;
+    /* width: 100%; */
+    overflow-x: scroll;
     padding: 30px;
     position: relative;
-    scrollbar-width: none;
-    /* display: flex;
-    justify-content: center; */
-    overflow-x: hidden;
+}
+.carousel::-webkit-scrollbar 
+{
+	width: 10px;
+	background: linear-gradient(90deg, #ca1bfc, #5562fc, #4eeaf9);
 }
 
+.carousel::-webkit-scrollbar-thumb 
+{
+	width: 10px;
+	background-color: #CC66FF;
+	border-radius: 20px;
+	opacity: .85
+}
 .carousel__container{
     white-space: nowrap;
-    margin: 70px 0px;
+    margin: 65px 0px 50px 0px;
     padding-bottom: 10px;
 }
 .carousel-item{
